@@ -41,11 +41,14 @@ steps:
   inputs:
     gitHubConnection: joe
     repositoryName: '$(Build.repositoryName)'
-    action: 'edit'
+    action: 'create'
     target: '$(Build.SourceVersion)'
     tagSource: 'auto' 
-    tag: '1.1.3'          
+    tag: '1.1.3'
+    releaseNotes: 'Release'         
     assets: '$(Build.ArtifactStagingDirectory)/*.tgz'
-    assetUploadMode: replace
+    # assetUploadMode: replace
     isDraft: true
+    addChangeLog: false
+
 

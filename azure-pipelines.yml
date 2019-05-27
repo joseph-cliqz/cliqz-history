@@ -45,10 +45,8 @@ steps:
     target: '$(Build.SourceVersion)'
     tagSource: 'auto' 
     tag: '1.1.3'
-    releaseNotes: 'Release'         
+    # releaseNotes: 'Release'         
     assets: '$(Build.ArtifactStagingDirectory)/*.tgz'
     # assetUploadMode: replace
-    isDraft: true
+    isPreRelease: true
     addChangeLog: false
-
-

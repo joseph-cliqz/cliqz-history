@@ -1,4 +1,4 @@
-# Node.js
+ # Node.js
 # Build a general Node.js project with npm.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
@@ -33,7 +33,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    contents: '/*.tgz'
+    contents: '**/cliqz-history*.tgz'
     targetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: GithubRelease@0 

@@ -31,6 +31,11 @@ steps:
     npm pack
   displayName: 'Before deploy'
 
+- task: CopyFiles@2
+  inputs:
+    contents: '/*.tgz'
+    targetFolder: '$(Build.ArtifactStagingDirectory)'
+
 - task: GithubRelease@0 
   displayName: 'Create GitHub Release'      
   inputs:
